@@ -1,9 +1,10 @@
-const express = require("express");
-const app = express();
-const port = 3000;
+import express, { Express, Request, Response } from "express";
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+const app: Express = express();
+const port: number = 3000;
+
+app.get("/topics", (req: Request, res: Response) => {
+  res.send("Chủ đề bài hát");
 });
 
 app.listen(port, () => {
